@@ -1,6 +1,9 @@
 
 *.DotSettings.user
 
+*/[b|B]in/
+*/[o|O]bj/
+
 # JustCode is a .NET coding add-in
 .JustCode
 
