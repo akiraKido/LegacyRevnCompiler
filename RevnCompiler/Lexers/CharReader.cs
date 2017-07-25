@@ -7,11 +7,6 @@ namespace RevnCompiler.Lexers
 
     internal class CharReader
     {
-        #region ForDebug
-
-        #if DEBUG
-        internal static CharReader CurrentReader;
-
         internal int CurrentLine
         {
             get
@@ -31,15 +26,12 @@ namespace RevnCompiler.Lexers
         }
         #endif
 
-        #endregion
-
         private readonly string _input;
         private int _index;
 
         internal CharReader(string input)
         {
             _input = input;
-            CurrentReader = this;
         }
 
         internal bool HasNext() => _index < _input.Length;
