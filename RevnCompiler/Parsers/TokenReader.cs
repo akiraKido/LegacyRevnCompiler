@@ -9,7 +9,7 @@ namespace RevnCompiler.Parsers
     internal class TokenReader
     {
         private readonly List<Token> _tokens;
-        private int _index;
+        private int _index = -1;
         
         internal TokenReader(IEnumerable<Token> tokens)
         {

@@ -85,10 +85,10 @@ namespace RevnCompiler.Parsers.Asts
     internal class FunctionAst : Ast
     {
         private readonly string _name;
-        private readonly List<ExpressionAst> _expressionAsts;
+        private readonly IEnumerable<Ast> _expressionAsts;
         private bool IsEntryPoint => _name == "Main";
 
-        public FunctionAst(string name, List<ExpressionAst> expressionAsts)
+        public FunctionAst(string name, IEnumerable<Ast> expressionAsts)
         {
             _name = name;
             _expressionAsts = expressionAsts;
